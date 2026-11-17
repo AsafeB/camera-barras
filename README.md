@@ -1,2 +1,47 @@
-# camera-barras
-Aplicativo leitor de códigos de barras com Expo e React Native
+# Tem na lista?
+
+Aplicativo mobile desenvolvido com Expo, React Native e TypeScript para ler códigos de barras EAN-13 e verificar se o produto está cadastrado em uma lista local.
+
+## Requisitos
+
+- Node.js compatível com o Expo SDK 58.
+- Expo Go atualizado no celular.
+- Um celular Android ou iOS com câmera.
+- GitHub Codespaces ou ambiente local com Node.js.
+
+## Preparar o projeto
+
+No terminal, dentro da pasta do projeto:
+
+\`\`\`bash
+npm install
+\`\`\`
+
+## Executar
+
+\`\`\`bash
+npx expo start --tunnel
+\`\`\`
+
+Escaneie o QR Code com o Expo Go.
+
+## Verificações sugeridas
+
+- Leia um dos dez códigos cadastrados para conferir nome, preço e destaque na lista.
+- Leia o código \`7899876000114\` para conferir o resultado de produto não encontrado.
+- Depois de uma leitura, aponte para outro código sem tocar em "Escanear novamente": o resultado anterior deve permanecer.
+- Toque em "Escanear novamente" para liberar a próxima leitura.
+
+## Verificar os tipos TypeScript
+
+\`\`\`bash
+npm run typecheck
+\`\`\`
+
+## Organização
+
+- \`interfaces/Produto.ts\`: tipo dos produtos.
+- \`dados/produtos.ts\`: cadastro local dos dez produtos.
+- \`componentes/CartaoResultado.tsx\`: cartão com o resultado da leitura.
+- \`componentes/ListaProdutos.tsx\`: lista de produtos com destaque.
+- \`App.tsx\`: permissões, câmera e controle de leitura.

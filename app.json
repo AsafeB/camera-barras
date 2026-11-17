@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Tem na lista?",
+    "slug": "tem-na-lista",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir que o Tem na lista? acesse a câmera para ler códigos de barras.",
+          "recordAudioAndroid": false
+        }
+      ]
+    ]
+  }
+}
