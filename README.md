@@ -4,7 +4,7 @@ Aplicativo mobile desenvolvido com Expo, React Native e TypeScript para ler cód
 
 ## Requisitos
 
-- Node.js 22.13 ou superior na linha 22, 24.3 ou superior na linha 24, ou 26 ou superior.
+- Node.js LTS, com versão mínima 22.13.x para o Expo SDK 58.
 - Expo Go compatível com o SDK 58 no celular.
 - Um celular Android ou iOS com câmera.
 - GitHub Codespaces ou ambiente local com Node.js.
