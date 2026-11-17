@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
-import { Produto } from "../interfaces/Produto";
+import type { Produto } from "../interfaces/Produto";
 
 interface ListaProdutosProps {
   produtos: Produto[];

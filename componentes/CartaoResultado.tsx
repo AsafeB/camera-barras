@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import { Produto } from "../interfaces/Produto";
+import type { Produto } from "../interfaces/Produto";
 
 interface CartaoResultadoProps {
   codigoLido: string | null;

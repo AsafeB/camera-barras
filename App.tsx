@@ -8,11 +8,8 @@ import {
   Text,
   View,
 } from "react-native";
-import {
-  BarcodeScanningResult,
-  CameraView,
-  useCameraPermissions,
-} from "expo-camera";
+import { CameraView, useCameraPermissions } from "expo-camera";
+import type { BarcodeScanningResult } from "expo-camera";
 import {
   SafeAreaProvider,
   SafeAreaView,
@@ -32,7 +29,7 @@ function ConteudoApp() {
     : undefined;
 
   function tratarLeitura(resultado: BarcodeScanningResult) {
-    if (travaLeitura.current) {
+    if (travaLeitura.current || resultado.type !== "ean13") {
       return;
     }
 
@@ -195,14 +192,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 10,
   },
-  textoBotao: {
-    color: "#FFFFFF",
-    fontSize: 15,
-    fontWeight: "bold",
-  },
-  lista: {
-    flex: 1,
-  },
   telaPermissao: {
     flex: 1,
     backgroundColor: "#F3F4F6",
@@ -230,5 +219,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 13,
     marginTop: 22,
+  },
+  textoBotao: {
+    color: "#FFFFFF",
+    fontSize: 15,
+    fontWeight: "bold",
   },
 });
