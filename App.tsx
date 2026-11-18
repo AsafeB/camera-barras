@@ -101,7 +101,7 @@ function ConteudoApp() {
 
         <View style={styles.areaCamera}>
           <CameraView
-            style={StyleSheet.absoluteFillObject}
+            style={StyleSheet.absoluteFill}
             facing="back"
             barcodeScannerSettings={{
               barcodeTypes: ["ean13"],
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   sobreposicao: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: "center",
     alignItems: "center",
   },
